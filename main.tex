@@ -1,0 +1,166 @@
+\documentclass[oneside, a4paper, onecolumn, 10pt]{article}
+
+\usepackage[
+  left=2cm,top=2.0cm,bottom=2.0cm,right=2cm,
+  headheight=17pt, % as per the warning by fancyhdr
+  includehead,includefoot,
+  heightrounded, % to avoid spurious underfull messages
+]{geometry}
+
+
+\usepackage[T1]{fontenc}
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{enumerate}
+\usepackage{paralist}
+\usepackage{xspace}
+\usepackage{color}
+\usepackage{times}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage[colorinlistoftodos,prependcaption,textsize=normal]{todonotes}
+\usepackage{pdfpages}
+\usepackage{fancyhdr} %% For changing headers and footers
+
+\usepackage{titling}
+\usepackage[nottoc,numbib]{tocbibind}
+
+%% \predate{}
+%% \postdate{}
+%% \date{}
+%% \author{\authorname}
+
+
+% Change this: Customize the title, author, advisor, abstract
+\newcommand{\thesistitle}[0]{A very long and informative title for my thesis work}
+\newcommand{\authorname}[0]{Name Surname}
+
+\newcommand{\supervisor}[0]{Advisor name}
+\newcommand{\supervisorinstitution}[0]{Advisor institution}
+
+\newcommand{\abstracttext}[0]{%
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+}
+
+
+\begin{document}
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+\clearpage
+
+%\title{\thesistitle}
+
+%\maketitle
+
+% Max 10 lines.
+%\noindent \paragraph*{Abstract}
+%\abstract
+
+\hspace{0pt}
+\vfill
+
+\begin{center}
+
+\includegraphics[width=0.3\textwidth]{logo-EP-vertical}
+
+\vspace*{2em}
+%
+{\large
+\textbf{\'Ecole Polytechnique}
+
+\vspace*{1em}
+\textit{BACHELOR THESIS IN COMPUTER SCIENCE}
+
+
+\vspace*{3em}
+{\Huge \textbf{\thesistitle}}
+\vspace*{3em}
+
+
+
+\textit{Author:}
+
+\vspace*{1em}
+\authorname{}, \'Ecole Polytechnique
+
+\vspace*{2em}
+%
+{\textit{Advisor:}}
+
+\vspace*{1em}
+\supervisor{}, \supervisorinstitution{}
+}
+
+\vspace*{2em}
+\textit{Academic year 2022/2023}
+
+\end{center}
+
+\vfill
+\hspace{0pt}
+
+\newpage
+
+\vfill
+\noindent\textbf{Abstract}\\[1em]
+%
+\fbox{
+\parbox{\textwidth}{
+\abstracttext{}
+}
+}
+\vfill
+
+
+\newpage
+
+% Setting up the header
+\pagestyle{fancy}
+%\renewcommand{\headrulewidth}{0pt} % Remove line at top
+%\renewcommand{\headrulewidth}{0.4pt}% Default \headrulewidth is 0.4pt
+\lhead{\authorname}
+%\chead{\acronym}
+\rhead{\thesistitle}
+
+
+
+\newpage
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\section{Introduction}
+
+\subsection{Guidelines for your thesis report}
+
+\begin{itemize}
+\item Structure your section, subsection, paragraph as you like, but avoid the use of chapters.
+%
+\item Use bibtex to cite related work, e.g., \cite{DBLP:journals/x/Turing37}, adding your reference in the {main.bib} file.
+%
+\item The thesis must be \textbf{at most} 30 pages long and \textbf{at least} 20 pages long.
+%
+\item Shoot for quality and not or length: we prefer reading 20 pages of high quality, well explained, work rather than 30 pages of messy content. 
+%
+\item The following are \textbf{not included} in the page count: title page, abstract page, table of content page, all the bibliography, and all the appendix.
+%
+\item Note: we will not evaluate your appendix, which should not contain your thesis contribution but only provide additional details (e.g., some code listing if they are important, additional tables for the experiments, \ldots).
+%
+\item You \textbf{cannot} change the tex template (e.g., font size, margin size, \ldots) to gain more space.
+\end{itemize}
+
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{main}
+
+\newpage
+\appendix
+
+\section{Appendix}
+\label{sec:appendix}
+
+\end{document}
