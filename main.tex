@@ -1,5 +1,16 @@
 \documentclass[oneside, a4paper, onecolumn, 10pt]{article}
 
+% Change this: Customize the title, author, advisor, abstract
+\newcommand{\thesistitle}[0]{A very long and informative title for my thesis work}
+\newcommand{\authorname}[0]{Name Surname}
+
+\newcommand{\supervisor}[0]{Advisor name}
+\newcommand{\supervisorinstitution}[0]{Advisor institution}
+
+\newcommand{\abstracttext}[0]{%
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+}
+
 \usepackage[
   left=2cm,top=2.0cm,bottom=2.0cm,right=2cm,
   headheight=17pt, % as per the warning by fancyhdr
@@ -34,16 +45,7 @@
 %% \author{\authorname}
 
 
-% Change this: Customize the title, author, advisor, abstract
-\newcommand{\thesistitle}[0]{A very long and informative title for my thesis work}
-\newcommand{\authorname}[0]{Name Surname}
 
-\newcommand{\supervisor}[0]{Advisor name}
-\newcommand{\supervisorinstitution}[0]{Advisor institution}
-
-\newcommand{\abstracttext}[0]{%
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-}
 
 
 \begin{document}
@@ -140,6 +142,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 \item Structure your section, subsection, paragraph as you like, but avoid the use of chapters.
 %
 \item Use bibtex to cite related work, e.g., \cite{DBLP:journals/x/Turing37}, adding your reference in the {main.bib} file.
+%
+\item Change the value of the commands {$\backslash$thesistitle}, {$\backslash$authorname}, {$\backslash$supervisor}, {$\backslash$supervisorinstitution}, {$\backslash$abstracttext} to set up the content of the title page. These commands are beginning of the {main.tex} file.
 %
 \item The thesis must be \textbf{at most} 30 pages long and \textbf{at least} 20 pages long.
 %
